@@ -2,7 +2,7 @@
     <div>
         <div v-if="$nuxt.isOffline">You are offline</div>
         <Header></Header>
-        <Nuxt />
+        <Nuxt keep-alive />
         <Footer></Footer>
     </div>
 </template>
