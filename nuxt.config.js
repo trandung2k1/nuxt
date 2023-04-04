@@ -27,8 +27,14 @@ export default {
     buildModules: [],
 
     // Modules: https://go.nuxtjs.dev/config-modules
-    modules: [],
-
+    modules: ['@nuxt/http', '@nuxtjs/axios'],
+    axios: {
+        proxy: true,
+    },
     // Build Configuration: https://go.nuxtjs.dev/config-build
-    build: {},
+    build: {
+        extend(config, ctx) {
+            config.performance.maxAssetSize = 700 * 1024;
+        },
+    },
 };
